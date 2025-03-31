@@ -595,7 +595,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 656807326}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2087981682}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Heal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &656807326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,7 +786,7 @@ GameObject:
   - component: {fileID: 1138958391}
   - component: {fileID: 1138958390}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Info Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1220,7 +1232,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2081467359}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2087981682}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2081467359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1270,6 +1294,7 @@ GameObject:
   - component: {fileID: 2087981683}
   - component: {fileID: 2087981682}
   - component: {fileID: 2087981681}
+  - component: {fileID: 2087981684}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1290,6 +1315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2087981682}
+  manager: {fileID: 2087981684}
 --- !u!114 &2087981682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,6 +1328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e1499ba47e18f45bb1cee7c3a909a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 2087981684}
   text: {fileID: 1138958390}
 --- !u!4 &2087981683
 Transform:
@@ -1318,6 +1345,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2087981684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087981680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eddbf4c2e8f6204e8490d51d8c9c510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2087981682}
+  vampire: {fileID: 2087981681}
+  info: {fileID: 1138958390}
+  attack: {fileID: 2081467358}
+  heal: {fileID: 656807325}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
